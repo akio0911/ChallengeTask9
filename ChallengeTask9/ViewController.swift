@@ -7,13 +7,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+    
+    @IBOutlet private weak var label: UILabel!
+    var value = "未選択"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        label.text = value
+    }
+    @IBAction func button(_ sender: UIButton) {
+        performSegue(withIdentifier: "next", sender: nil)
+    }
+    
 }
 

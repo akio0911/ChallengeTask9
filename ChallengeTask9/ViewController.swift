@@ -21,26 +21,26 @@ final class ViewController: UIViewController {
     }
     @IBAction func button(_ sender: UIButton) {
         let nextVC = storyboard?.instantiateViewController(identifier: "SecondView")
-            self.present(nextVC!, animated: true, completion: nil)
+        self.present(nextVC!, animated: true, completion: nil)
     }
     
 }
 
 final class OtherViewController: UIViewController {
-
-     @IBOutlet private weak var label: UILabel!
-     var value = "未選択"
-
-     override func viewDidLoad() {
-         super.viewDidLoad()
-     }
-
-     override func viewWillAppear(_ animated: Bool) {
-         label.text = value
-     }
+    
+    @IBOutlet private weak var label: UILabel!
+    var value = "未選択"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        label.text = value
+    }
     @IBAction func button(_ sender: UIButton) {
         let nextVC = storyboard?.instantiateViewController(identifier: "SecondView")
-            self.present(nextVC!, animated: true, completion: nil)
+        self.present(nextVC!, animated: true, completion: nil)
     }
-
- }
+    
+}

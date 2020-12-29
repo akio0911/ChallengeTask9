@@ -17,23 +17,38 @@ final class SecondViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func prefecturesButton(_ sender: AnyObject) {
-        let preVC = presentingViewController as! ViewController
-        
-        switch sender.tag {
-        case 1:
-            preVC.value = button.currentTitle ?? ""
-        case 2:
-            preVC.value = button2.currentTitle ?? ""
-        case 3:
-            preVC.value = button3.currentTitle ?? ""
-        case 4:
-            preVC.value = button4.currentTitle ?? ""
-        default:
-            break
+    @IBAction func prefecturesButton(_ sender: UIButton) {
+        let tab = self.presentingViewController as! UITabBarController
+        let nav = tab.selectedViewController as! UINavigationController
+        if let vc = nav.viewControllers[nav.viewControllers.count - 1] as? ViewController{
+            switch sender.tag {
+            case 1:
+                vc.value = button.currentTitle ?? ""
+            case 2:
+                vc.value = button2.currentTitle ?? ""
+            case 3:
+                vc.value = button3.currentTitle ?? ""
+            case 4:
+                vc.value = button4.currentTitle ?? ""
+            default:
+                break
+            }
+            
+        } else if let othervc = nav.viewControllers[nav.viewControllers.count - 1] as? OtherViewController {
+            switch sender.tag {
+            case 1:
+                othervc.value = button.currentTitle ?? ""
+            case 2:
+                othervc.value = button2.currentTitle ?? ""
+            case 3:
+                othervc.value = button3.currentTitle ?? ""
+            case 4:
+                othervc.value = button4.currentTitle ?? ""
+            default:
+                break
+            }
         }
-        // preVC.value = button.currentTitle ?? ""
-        dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelButton(_ sender: Any) {

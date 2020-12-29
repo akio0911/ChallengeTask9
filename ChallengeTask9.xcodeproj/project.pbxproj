@@ -61,11 +61,11 @@
 				D61457F0259989F700E0C6BE /* AppDelegate.swift */,
 				D61457F2259989F700E0C6BE /* SceneDelegate.swift */,
 				D61457F4259989F700E0C6BE /* ViewController.swift */,
+				D614580525998D0C00E0C6BE /* SecondViewController.swift */,
 				D61457F6259989F700E0C6BE /* Main.storyboard */,
 				D61457F9259989F900E0C6BE /* Assets.xcassets */,
 				D61457FB259989F900E0C6BE /* LaunchScreen.storyboard */,
 				D61457FE259989F900E0C6BE /* Info.plist */,
-				D614580525998D0C00E0C6BE /* SecondViewController.swift */,
 			);
 			path = ChallengeTask9;
 			sourceTree = "<group>";

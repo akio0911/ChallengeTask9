@@ -71,21 +71,33 @@
                                 <rect key="frame" x="184" y="136" width="46" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="東京都"/>
+                                <connections>
+                                    <action selector="tokyo:" destination="vxj-4V-Wba" eventType="touchUpInside" id="ODp-PP-Ipp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLE-wJ-r6j">
                                 <rect key="frame" x="184" y="208" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="埼玉県"/>
+                                <connections>
+                                    <action selector="saitama:" destination="vxj-4V-Wba" eventType="touchUpInside" id="lvT-zW-djo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yh-KW-C6Y">
                                 <rect key="frame" x="184" y="246" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="千葉県"/>
+                                <connections>
+                                    <action selector="chiba:" destination="vxj-4V-Wba" eventType="touchUpInside" id="a8o-kR-nPP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwA-V3-RHS">
                                 <rect key="frame" x="176" y="170" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="神奈川県"/>
+                                <connections>
+                                    <action selector="kanagawa:" destination="vxj-4V-Wba" eventType="touchUpInside" id="7dg-pi-0IR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XjB-Ea-Ckw"/>

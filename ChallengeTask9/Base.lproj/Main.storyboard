@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="入力"/>
                                 <connections>
-                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uBp-Kh-wsq"/>
+                                    <segue destination="qRz-u6-jbn" kind="presentation" modalPresentationStyle="fullScreen" id="g65-X7-OeJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="未選択" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lt5-de-Z4G">
@@ -45,7 +45,6 @@
                     <navigationItem key="navigationItem" id="F3i-zG-fZy"/>
                     <connections>
                         <outlet property="label" destination="Lt5-de-Z4G" id="h5p-bI-joj"/>
-                        <segue destination="vxj-4V-Wba" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="hOY-B4-Lrb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -60,30 +59,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ib-4n-ltN">
-                                <rect key="frame" x="184" y="129" width="46" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="東京都"/>
-                                <connections>
-                                    <action selector="prefecturesButton:" destination="vxj-4V-Wba" eventType="touchUpInside" id="tTG-kc-u9Q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLE-wJ-r6j">
-                                <rect key="frame" x="184" y="201" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="埼玉県"/>
-                                <connections>
-                                    <action selector="prefecturesButton:" destination="vxj-4V-Wba" eventType="touchUpInside" id="2qg-SF-qu6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yh-KW-C6Y">
-                                <rect key="frame" x="184" y="239" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="千葉県"/>
-                                <connections>
-                                    <action selector="prefecturesButton:" destination="vxj-4V-Wba" eventType="touchUpInside" id="GFO-PQ-QDY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBM-mp-hbP">
                                 <rect key="frame" x="29" y="44" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -92,8 +67,32 @@
                                     <action selector="cancelButton:" destination="vxj-4V-Wba" eventType="touchUpInside" id="KbJ-c0-5cK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ib-4n-ltN">
+                                <rect key="frame" x="184" y="136" width="46" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="東京都"/>
+                                <connections>
+                                    <action selector="prefecturesButton:" destination="vxj-4V-Wba" eventType="touchUpInside" id="tTG-kc-u9Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLE-wJ-r6j">
+                                <rect key="frame" x="184" y="208" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="埼玉県"/>
+                                <connections>
+                                    <action selector="prefecturesButton:" destination="vxj-4V-Wba" eventType="touchUpInside" id="2qg-SF-qu6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yh-KW-C6Y">
+                                <rect key="frame" x="184" y="246" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="千葉県"/>
+                                <connections>
+                                    <action selector="prefecturesButton:" destination="vxj-4V-Wba" eventType="touchUpInside" id="GFO-PQ-QDY"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwA-V3-RHS">
-                                <rect key="frame" x="176" y="163" width="62" height="30"/>
+                                <rect key="frame" x="176" y="170" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="神奈川県"/>
                                 <connections>
@@ -104,16 +103,19 @@
                         <viewLayoutGuide key="safeArea" id="XjB-Ea-Ckw"/>
                         <color key="backgroundColor" red="0.77708277670000003" green="0.96940380329999998" blue="0.83902296750000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="nG3-BG-8kk"/>
                     <connections>
                         <outlet property="button" destination="5ib-4n-ltN" id="i8x-Pm-kc5"/>
                         <outlet property="button2" destination="zwA-V3-RHS" id="EeN-j4-smO"/>
                         <outlet property="button3" destination="zLE-wJ-r6j" id="rhC-M7-VjJ"/>
                         <outlet property="button4" destination="2yh-KW-C6Y" id="PUP-xv-wMZ"/>
+                        <segue destination="aif-bS-Svj" kind="unwind" identifier="exitSegue" unwindAction="unwindWithSegue:" id="bfB-i1-mIt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZP-mC-1nf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="aif-bS-Svj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2876.811594202899" y="125.89285714285714"/>
+            <point key="canvasLocation" x="3910" y="549"/>
         </scene>
         <!--Item1-->
         <scene sceneID="zrX-Pg-wfU">
@@ -140,6 +142,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wHM-Os-lsw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZWO-R7-tUE">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -165,7 +168,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="入力"/>
                                 <connections>
-                                    <action selector="button:" destination="qJ4-wd-D4L" eventType="touchUpInside" id="Kq1-xC-LqB"/>
+                                    <segue destination="Uks-Q9-eTr" kind="presentation" modalPresentationStyle="fullScreen" id="v7P-LK-REN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="未選択" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWR-F7-DXD">
@@ -189,7 +192,6 @@
                     <navigationItem key="navigationItem" id="EZv-AX-UGl"/>
                     <connections>
                         <outlet property="label" destination="qWR-F7-DXD" id="hhz-eH-aek"/>
-                        <segue destination="vxj-4V-Wba" kind="presentation" id="6H6-0n-Y2m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EyB-J0-zNn" sceneMemberID="firstResponder"/>
@@ -215,9 +217,45 @@
             </objects>
             <point key="canvasLocation" x="1048" y="867"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qfm-da-vjh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qRz-u6-jbn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2XB-86-mmJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vxj-4V-Wba" kind="relationship" relationship="rootViewController" id="KoG-rE-J1E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awR-SW-8Wc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2842" y="126"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9dt-33-r84">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uks-Q9-eTr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r25-00-jka">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vxj-4V-Wba" kind="relationship" relationship="rootViewController" id="C47-pQ-Tw8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Leu-F6-O9p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2841" y="867"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hOY-B4-Lrb"/>
+        <segue reference="KoG-rE-J1E"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

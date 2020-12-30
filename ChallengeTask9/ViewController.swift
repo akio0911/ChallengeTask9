@@ -8,39 +8,29 @@
 import UIKit
 
 final class ViewController: UIViewController {
-    
     @IBOutlet private weak var label: UILabel!
-    var value = "未選択"
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        label.text = value
-    }
-    @IBAction func button(_ sender: UIButton) {
-        let nextVC = storyboard?.instantiateViewController(identifier: "SecondView")
-        self.present(nextVC!, animated: true, completion: nil)
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        let secondVC = segue.source as? SecondViewController
+        label.text = secondVC?.prefectureName ?? ""
     }
     
 }
 
 final class OtherViewController: UIViewController {
-    
     @IBOutlet private weak var label: UILabel!
-    var value = "未選択"
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        label.text = value
-    }
-    @IBAction func button(_ sender: UIButton) {
-        let nextVC = storyboard?.instantiateViewController(identifier: "SecondView")
-        self.present(nextVC!, animated: true, completion: nil)
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        let secondVC = segue.source as? SecondViewController
+        label.text = secondVC?.prefectureName ?? ""
     }
     
 }

@@ -11,6 +11,7 @@ final class ViewController: UIViewController {
     @IBOutlet private weak var label: UILabel!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -25,6 +26,7 @@ final class OtherViewController: UIViewController {
     @IBOutlet private weak var label: UILabel!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     

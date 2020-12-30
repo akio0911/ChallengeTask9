@@ -10,29 +10,36 @@ import UIKit
 final class SecondViewController: UIViewController {
     
     private(set) var prefectureName = ""
-    @IBOutlet private weak var button: UIButton!
-    @IBOutlet private weak var button2: UIButton!
-    @IBOutlet private weak var button3: UIButton!
-    @IBOutlet private weak var button4: UIButton!
+    @IBOutlet private weak var tokyoButton: UIButton!
+    @IBOutlet private weak var kanagawaButton: UIButton!
+    @IBOutlet private weak var saitamaButton: UIButton!
+    @IBOutlet private weak var chibaButton: UIButton!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    @IBAction func prefecturesButton(_ sender: AnyObject) {
-        print(prefectureName)
-        switch sender.tag {
-        case 1:
-            prefectureName = button.currentTitle ?? ""
-        case 2:
-            prefectureName = button2.currentTitle ?? ""
-        case 3:
-            prefectureName = button3.currentTitle ?? ""
-        case 4:
-            prefectureName = button4.currentTitle ?? ""
-        default:
-            break
-        }
+    @IBAction func tokyo(_ sender: AnyObject) {
+        // ボタンに表示しているボタン名をデータとして流用するのはやめた方が良い。
+        // ボタン名を変更した途端に動かなくなる処理が出てくる
+        didTapPrefectureButton(prefectureName: "東京都", sender: sender)
+    }
+    
+    @IBAction func kanagawa(_ sender: AnyObject) {
+        didTapPrefectureButton(prefectureName: "神奈川県", sender: sender)
+    }
+    
+    @IBAction func saitama(_ sender: AnyObject) {
+        didTapPrefectureButton(prefectureName: "埼玉県", sender: sender)
+    }
+    
+    @IBAction func chiba(_ sender: AnyObject) {
+        didTapPrefectureButton(prefectureName: "千葉県", sender: sender)
+    }
+    
+    private func didTapPrefectureButton(prefectureName: String, sender: AnyObject) {
+        self.prefectureName = prefectureName
         performSegue(withIdentifier: "exitSegue", sender: sender)
     }
     

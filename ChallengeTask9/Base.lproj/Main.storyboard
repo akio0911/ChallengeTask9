@@ -71,33 +71,21 @@
                                 <rect key="frame" x="184" y="136" width="46" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="東京都"/>
-                                <connections>
-                                    <action selector="prefecturesButton:" destination="vxj-4V-Wba" eventType="touchUpInside" id="tTG-kc-u9Q"/>
-                                </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLE-wJ-r6j">
                                 <rect key="frame" x="184" y="208" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="埼玉県"/>
-                                <connections>
-                                    <action selector="prefecturesButton:" destination="vxj-4V-Wba" eventType="touchUpInside" id="2qg-SF-qu6"/>
-                                </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yh-KW-C6Y">
                                 <rect key="frame" x="184" y="246" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="千葉県"/>
-                                <connections>
-                                    <action selector="prefecturesButton:" destination="vxj-4V-Wba" eventType="touchUpInside" id="GFO-PQ-QDY"/>
-                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwA-V3-RHS">
                                 <rect key="frame" x="176" y="170" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="神奈川県"/>
-                                <connections>
-                                    <action selector="prefecturesButton:" destination="vxj-4V-Wba" eventType="touchUpInside" id="NO9-Nf-IZ2"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XjB-Ea-Ckw"/>
@@ -105,10 +93,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="nG3-BG-8kk"/>
                     <connections>
-                        <outlet property="button" destination="5ib-4n-ltN" id="i8x-Pm-kc5"/>
-                        <outlet property="button2" destination="zwA-V3-RHS" id="EeN-j4-smO"/>
-                        <outlet property="button3" destination="zLE-wJ-r6j" id="rhC-M7-VjJ"/>
-                        <outlet property="button4" destination="2yh-KW-C6Y" id="PUP-xv-wMZ"/>
+                        <outlet property="chibaButton" destination="2yh-KW-C6Y" id="qb8-sY-I2S"/>
+                        <outlet property="kanagawaButton" destination="zwA-V3-RHS" id="OHR-bK-3Vi"/>
+                        <outlet property="saitamaButton" destination="zLE-wJ-r6j" id="hBV-qL-wHk"/>
+                        <outlet property="tokyoButton" destination="5ib-4n-ltN" id="kXU-q5-8bU"/>
                         <segue destination="aif-bS-Svj" kind="unwind" identifier="exitSegue" unwindAction="unwindWithSegue:" id="bfB-i1-mIt"/>
                     </connections>
                 </viewController>
